@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café lab</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">Café lab</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#rating">Rate Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button id="themeToggle" class="theme-btn" aria-label="Toggle theme" title="Toggle theme" type="button">
+                        <svg class="icon-sun" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4"/>
+                            <line x1="12" y1="2" x2="12" y2="6"/>
+                            <line x1="12" y1="18" x2="12" y2="22"/>
+                            <line x1="2" y1="12" x2="6" y2="12"/>
+                            <line x1="18" y1="12" x2="22" y2="12"/>
+                            <line x1="4.2" y1="4.2" x2="6.8" y2="6.8"/>
+                            <line x1="17.2" y1="17.2" x2="19.8" y2="19.8"/>
+                            <line x1="4.2" y1="19.8" x2="6.8" y2="17.2"/>
+                            <line x1="17.2" y1="6.8" x2="19.8" y2="4.2"/>
+                        </svg>
+                        <svg class="icon-moon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M21 12.5a8.5 8.5 0 1 1-9.8-9.4 7 7 0 0 0 9.8 9.4z"/>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+            <div class="controls">
+                <div class="menu-toggle" id="menuToggle">☰</div>
+            </div>
+        </div>
+    </nav>
+    <section id="home" class="section home-section">
+        <div class="container">
+            <h1>Welcome to Café lab</h1>
+            <p>Your cozy spot for coffee, pastries, and connection.</p>
+        </div>
+    </section>
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Café lab is a community hub for students, professionals, and families. We offer high-quality coffee, fresh pastries, and a welcoming atmosphere for all.</p>
+        </div>
+    </section>
+    <section id="menu" class="section menu-section">
+        <div class="container">
+            <h2>Menu</h2>
+            <div class="menu-grid">
+                <article class="menu-card">
+                    <div class="face face1">
+                        <img src="https://i.pinimg.com/736x/ab/d4/3a/abd43a6d3aa0c685da4e0ae3bdcd6693.jpg" alt="Espresso" class="menu-image">
+                        <div class="content">
+                            <h3> <!-- Espresso --> </h3>
+                            <span class="price">Rs299</span>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <h3>Espresso</h3> 
+                            <p>Rich, bold shot with crema. The pure essence of coffee.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card">
+                    <div class="face face1">
+                        <img src="https://cdn.pixabay.com/photo/2017/06/22/15/21/latte-art-2431160_1280.jpg" alt="Cappuccino" class="menu-image">
+                        <div class="content">
+                            <h3>Cappuccino</h3>
+                            <span class="price">Rs350</span>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <h3>Cappuccino</h3>
+                            <p>Equal parts espresso, steamed milk, and foam.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card">
+                    <div class="face face1">
+                        <img src="https://cdn.pixabay.com/photo/2020/02/07/21/06/coffee-4828393_1280.jpg" alt="Latte" class="menu-image">
+                        <div class="content">
+                            <h3>Latte</h3>
+                            <span class="price">Rs399</span>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <h3>Latte</h3>
+                            <p>Smooth espresso with velvety steamed milk.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card">
+                    <div class="face face1">
+                        <img src="https://media.istockphoto.com/id/2205657392/photo/cup-of-coffee.jpg?s=612x612&w=0&k=20&c=r2SwrZ6-xT1ZEUlKAzttYPSP_dOZoLzLie0D4dDYxDw=" alt="Mocha" class="menu-image">
+                        <div class="content">
+                            <h3>Mocha</h3>
+                            <span class="price">Rs499</span>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <h3>Mocha</h3>
+                            <p>Chocolate-kissed latte topped with foam.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card">
+                    <div class="face face1">
+                        <img src="https://cdn.pixabay.com/photo/2016/11/29/05/07/breads-1867459_1280.jpg" alt="Fresh Pastries" class="menu-image">
+                        <div class="content">
+                            <h3>Fresh Pastries</h3>
+                            <span class="price">Rs250</span>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <h3>Fresh Pastries</h3>
+                            <p>Daily baked croissants, muffins, and more.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card">
+                    <div class="face face1">
+                        <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/sandwich-1238615_1280.jpg" alt="Sandwiches" class="menu-image">
+                        <div class="content">
+                            <h3>Sandwiches</h3>
+                            <span class="price">Rs580</span>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <h3>Sandwiches</h3>
+                            <p>Hearty, fresh fillings on artisanal bread.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <img src="https://cdn.pixabay.com/photo/2017/06/22/15/21/latte-art-2431160_1280.jpg" alt="Coffee 1" class="gallery-img">
+                <img src="https://cdn.pixabay.com/photo/2020/02/07/21/06/coffee-4828393_1280.jpg" alt="Coffee 2" class="gallery-img">
+                <img src="https://cdn.pixabay.com/photo/2016/11/29/05/07/breads-1867459_1280.jpg" alt="Pastry 1" class="gallery-img">
+                <img src="https://cdn.pixabay.com/photo/2014/10/04/07/40/cafe-472656_1280.jpg" alt="Cafe Interior" class="gallery-img">
+            </div>
+        </div>
+    </section>
+    
+    <section id="rating" class="section rating-section">
+        <div class="container">
+            <h2>Rate Us</h2>
+            <div class="rating" id="ratingWidget" aria-label="Rate our cafe" role="radiogroup">
+                <button class="star" data-value="1" aria-label="1 star" role="radio" aria-checked="false">★</button>
+                <button class="star" data-value="2" aria-label="2 stars" role="radio" aria-checked="false">★</button>
+                <button class="star" data-value="3" aria-label="3 stars" role="radio" aria-checked="false">★</button>
+                <button class="star" data-value="4" aria-label="4 stars" role="radio" aria-checked="false">★</button>
+                <button class="star" data-value="5" aria-label="5 stars" role="radio" aria-checked="false">★</button>
+            </div>
+            <p id="ratingMessage" class="rating-message">Tap a star to rate your experience.</p>
+        </div>
+    </section>
+    
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2>Contact</h2>
+            <form class="contact-form" id="contactForm">
+                <input type="text" id="userName" placeholder="Your Name" required>
+                <input type="email" id="userEmail" placeholder="Your Email" required>
+                <textarea id="userMessage" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div id="successMessage" style="display: none; color: green; text-align: center; margin-top: 20px;">
+                Thank you! Your message has been sent successfully.
+            </div>
+            <div id="errorMessage" style="display: none; color: red; text-align: center; margin-top: 20px;">
+                Sorry, there was an error sending your message. Please try again.
+            </div>
+            <div class="contact-info">
+                <p><strong>Address:</strong> 123 Coffee St, Your City</p>
+                <p><strong>Email:</strong> info@cafelab.com</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Café lab. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../cafelab/scripts.js"></script>
+</body>
+</html>
